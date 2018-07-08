@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-// import logo from './logo.svg';
-import './App.css';
-import { Home } from './components/Home.jsx';
-import { FunThings } from './components/FunThings.jsx';
-import { Friends } from './components/Friends.jsx';
-import { Projects } from './components/Projects.jsx';
-import { Food } from './components/Food.jsx';
 import Navbar from './components/CustomNavbar';
+import { RouteHandler } from './RouteHandler';
+import './App.css';
 
+// let navHeader = true;
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { nav: false };
+    this.shouldDisplayBar = this.shouldDisplayBar.bind(this);
+  }
+
+  shouldDisplayBar(newState) {
+    this.setState( {
+      nav: newState
+    });
+  }
   render() {
     return (
       <Router>
         <div>
-          <Navbar />
-          <Route exact path="/" component={Home} />
-          <Route path="/FunThings" component={FunThings} />
-          <Route path="/Friends" component={Friends} />
-          <Route path="/Projects" component={Projects} />
-          <Route path="/Food" component={Food} />
+          {this.state.nav && <Navbar/>}
+          <RouteHandler onClick={this.shouldDisplayBar} />
         </div>
       </Router>
     );
