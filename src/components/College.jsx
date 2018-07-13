@@ -14,9 +14,12 @@ import sunny from '../Pictures/TT/DSC_7608.jpg';
 import ryan from '../Pictures/TT/DSC_7513.jpg';
 
 export class College extends Component {
+  componentWillMount () {
+      this.props.onClick(true);
+  }
   render() {
     return(
-      <div>
+      <div className="body">
         <h1 className="header">Friendship Compilation - College Edition</h1>
         <Grid>
           <h2 className="sub-header">Theta Tau at UCLA</h2>

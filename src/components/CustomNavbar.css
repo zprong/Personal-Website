@@ -24,6 +24,11 @@
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .navbar-collapse {
     padding-right: 15px;
     padding-left: 15px;

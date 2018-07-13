@@ -11,9 +11,13 @@ import catan from '../Pictures/settlers-of-catan.jpg';
 import tangled from '../Pictures/tangled.jpg';
 
 export class FunThings extends Component {
+  componentWillMount () {
+      this.props.onClick(true);
+  }
+
   render() {
     return(
-      <div>
+      <div className="body">
         <h1 className="header">Things I Enjoy Doing</h1>
         <Grid>
           <Row className="show-grid text-center">
@@ -38,7 +42,7 @@ export class FunThings extends Component {
           </Row>
           <Row className="show-grid text-center">
             <Col xs={12} sm={4} className="person-wrapper">
-              <h3>Late Nights Out With Friends</h3>
+              <h3>Late Nights With Friends</h3>
               <a href={"https://www.yelp.com/biz/echo-park-lake-los-angeles-4?osq=park"} target="_blank">
                 <Image src={friends} className="fun-pic" />
               </a>

@@ -34,9 +34,13 @@ import sd from '../Pictures/BFOB/sd.jpg';
 
 
 export class Hs extends Component {
+  componentWillMount () {
+      this.props.onClick(true);
+  }
+
   render() {
     return(
-      <div>
+      <div className="body">
         <h1 className="header">Friendship Compilation - High School Edition</h1>
         <Grid>
           <h2 className="sub-header">The Shenanigang</h2>

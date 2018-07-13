@@ -11,9 +11,13 @@ import korean from '../Pictures/loveletter.jpg';
 import donuts from '../Pictures/birdies.jpg';
 
 export class Food extends Component {
+  componentWillMount () {
+      this.props.onClick(true);
+  }
+
   render() {
     return(
-      <div>
+      <div className="body">
         <h1 className="header">Food Recommendations</h1>
         <Grid>
           <Row className="show-grid text-center">

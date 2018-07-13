@@ -5,22 +5,18 @@ import './Home.css';
 import seattle from '../Pictures/seattle.jpg';
 
 export class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-  }
-  handleChange() {
-    this.props.onClick(false);
+  componentWillMount() {
+    this.props.onClick(true);
   }
 
   render() {
     return(
-      <Grid>
+      <Grid className="body">
         <Jumbotron>
           <h2>Welcome to My Website!</h2>
           <p>I've gotten pretty good at this huh?</p>
           <Link to="/Friends">
-            <Button bsStyle="primary" onClick={this.handleChange}>About</Button>
+            <Button bsStyle="primary">About</Button>
           </Link>
         </Jumbotron>
         <Row className="show-grid text-center">

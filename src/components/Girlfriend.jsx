@@ -14,9 +14,12 @@ import beach from '../Pictures/GF/beach.jpg';
 import prom from '../Pictures/GF/prom.JPG';
 
 export class Girlfriend extends Component {
+  componentWillMount () {
+      this.props.onClick(true);
+  }
   render() {
     return(
-      <div>
+      <div className="body">
         <h1 className="header">Friendship Compilation - Girlfriend Edition</h1>
         <Grid>
           <h2 className="sub-header">aka Boba Addict</h2>
