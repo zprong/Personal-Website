@@ -14,14 +14,14 @@ export class Home extends Component {
       <Grid className="body">
         <Jumbotron>
           <h2>Welcome to My Website!</h2>
-          <p>I've gotten pretty good at this huh?</p>
+          <p>Wubba lubba dub dub!</p>
           <Link to="/Friends">
             <Button bsStyle="primary">About</Button>
           </Link>
         </Jumbotron>
         <Row className="show-grid text-center">
           <Col xs={12} sm={4} className="person-wrapper">
-            <Image src={seattle} circle className="profile-pic" />
+            <Image src={seattle} className="profile-pic" />
             <h3>Zach</h3>
             <p>My name Zcach!</p>
           </Col>
